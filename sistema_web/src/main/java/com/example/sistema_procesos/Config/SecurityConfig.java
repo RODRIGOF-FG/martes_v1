@@ -54,7 +54,7 @@ public class SecurityConfig {
                         .requestMatchers("/gestion/productos/**").hasAnyRole("ADMIN", "OPERADOR")
                         .requestMatchers("/admin/asignar/**").hasRole("ADMIN")
                         .requestMatchers("/admin/asignar/mi-asignacion", "/admin/asignar/completar").hasAnyRole("ADMIN", "OPERADOR")
-                      
+                        .requestMatchers("/operador/asistencia/**").hasRole("OPERADOR")
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/admin/salida/").hasRole("ADMIN")	
                         .anyRequest().authenticated()
