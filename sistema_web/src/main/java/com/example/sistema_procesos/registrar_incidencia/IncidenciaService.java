@@ -27,4 +27,9 @@ public class IncidenciaService {
         return repository.save(incidencia);
     }
 
+    // Ver incidencias propias del usuario
+    public List<Incidencia> listar(User user) {
+        
+    }
+
 }
