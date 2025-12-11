@@ -56,7 +56,7 @@ public class SecurityConfig {
                         .requestMatchers("/admin/asignar/mi-asignacion", "/admin/asignar/completar").hasAnyRole("ADMIN", "OPERADOR")
                       
                         .requestMatchers("/admin/**").hasRole("ADMIN")
-
+                        .requestMatchers("/admin/salida/").hasRole("ADMIN")	
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
