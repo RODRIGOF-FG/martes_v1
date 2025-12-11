@@ -30,4 +30,4 @@ public class AdminAsistenciaService {
         ).collect(Collectors.toList());
     }
 }
-// asistecia completada
+// asistecia completada okey
