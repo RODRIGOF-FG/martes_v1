@@ -4,3 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+@RestController
+@RequestMapping("/admin/incidencias")
+@RequiredArgsConstructor
