@@ -10,5 +10,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/operador")
 @RequiredArgsConstructor
 public class OperadorController {
+ private final UserRepository userRepository;
 
+    @GetMapping("/profile")
+    public ResponseEntity<?> profile(Authentication auth) {
     
