@@ -16,5 +16,7 @@ public class AdminController {
 
     @GetMapping("/profile")
     public ResponseEntity<?> profile(Authentication auth) {
+        String username = auth.getName();
+        User user = userRepository.findByEmail(username).orElse(null);
     }
 }
