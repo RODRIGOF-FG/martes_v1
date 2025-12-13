@@ -11,5 +11,9 @@ import java.util.List;
 public class AdminIncidenciaService {
 
 // admin incidencias
+private final IncidenciaRepository repository;
 
+    public List<Incidencia> listarTodas() {
+        return repository.findAll();
+    }
 }
