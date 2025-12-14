@@ -16,4 +16,12 @@ private final IncidenciaRepository repository;
     public List<Incidencia> listarTodas() {
         return repository.findAll();
     }
+    // Marcar como atendida
+    public Incidencia marcarAtendida(Long id) {
+        Incidencia incidencia = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Incidencia no encontrada"));
+
+        incidencia.setEstado("ATENDIDO");
+        return repository.save(incidencia);
+    }
 }
