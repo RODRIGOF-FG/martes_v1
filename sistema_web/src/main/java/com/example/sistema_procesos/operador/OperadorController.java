@@ -17,3 +17,6 @@ public class OperadorController {
      String username = auth.getName();
         User user = userRepository.findByEmail(username).orElse(null);
         if (user == null) return ResponseEntity.status(404).body("Usuario no encontrado");
+              return ResponseEntity.ok(user);
+    }
+}
