@@ -10,6 +10,11 @@ import java.util.List;
 public class AdminIncidenciaController {
 
     private final AdminIncidenciaService service;
+    @GetMapping
+    public List<Incidencia> listarTodas() {
+    return service.listarTodas();
+}
+
 
 }
 
