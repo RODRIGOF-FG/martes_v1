@@ -19,4 +19,9 @@ public class IncidenciaController {
                                 @RequestParam String descripcion) {
         return service.registrarIncidencia(user, descripcion);
     }
+
+    @GetMapping
+    public List<Incidencia> listar(@AuthenticationPrincipal User user) {
+        return service.listarMisIncidencias(user);
+    }
 }
