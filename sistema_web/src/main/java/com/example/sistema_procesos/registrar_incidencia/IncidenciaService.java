@@ -13,7 +13,7 @@ public class IncidenciaService {
 
     private final IncidenciaRepository repository;
 
-    // Registro
+    // Registrar incidencia nueva
     public Incidencia registrarIncidencia(User user, String descripcion) {
         Incidencia incidencia = Incidencia.builder()
                 .userId(user.getId())
@@ -28,8 +28,7 @@ public class IncidenciaService {
     }
 
     // Ver incidencias propias del usuario
-    public List<Incidencia> listar(User user) {
-        
+    public List<Incidencia> listarMisIncidencias(User user) {
+        return repository.findByUserId(user.getId());
     }
-
 }
