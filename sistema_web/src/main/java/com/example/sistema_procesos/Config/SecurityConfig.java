@@ -58,8 +58,9 @@ public class SecurityConfig {
                         .requestMatchers("/admin/**").hasRole("ADMIN")
                         .requestMatchers("/admin/salida/").hasRole("ADMIN")
                         .requestMatchers("/operador/salida/").hasRole("OPERADOR")	
-                        .requestMatchers("/operador/incidencias/**").hasRole("OPERADOR")	
-
+                        .requestMatchers("/operador/incidencias/**").hasRole("OPERADOR")
+                        //Crear el endpoint para admin
+                        .requestMatchers("/admin/incidencias/**")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
