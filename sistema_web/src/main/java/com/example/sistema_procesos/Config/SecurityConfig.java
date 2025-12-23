@@ -62,6 +62,7 @@ public class SecurityConfig {
                         //Crear el endpoint para admin          //Validación del rol usuario colaboración con Héctor 
                         .requestMatchers("/admin/incidencias/**").hasRole("ADMIN")
                         .anyRequest().authenticated()
+                        //proyecto acabado muchachooooo
                 )
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(authenticationProvider())
